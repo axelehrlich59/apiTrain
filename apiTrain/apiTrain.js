@@ -7,6 +7,8 @@ const callBackGetSuccess = function(data) {
   // On affiche la réponse de l'api dans notre variable element, la température 
   // se trouve dans l'objet data de la branche main.temp
   element.innerHTML = "La temperature est de " + data.main.temp;
+
+  
 }
 
  // Fonction d'appel d'API via un onclick button
@@ -20,14 +22,24 @@ function buttonClickGET() {
       //alert( "second success" );
     })
     .fail(function() {
-      let error = document.getElementById('errorCard');
-      if (error.style.display == "none") {
-        error.style.display == "flex"
-      }
-    })
-    .always(function() {
-      //alert( "finished" );
-    });
+
+     
+      
+      
+        const errorCard = document.getElementById('errorCard');
+        errorCard.style.display = "flex";
+        document.getElementById('cardHeader').innerHTML = 'Erreur';
+        document.getElementById('errorP').innerHTML = 'La ville que vous avez saisie n\'est pas reconnue';
+        
+        setTimeout(function(){ 
+          errorCard.style.display = "none"
+         }, 3000);
+      })
+      
+
+      
+
+
 
     
 }

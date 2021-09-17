@@ -7,23 +7,23 @@
     <script src="apiTrain.js"></script>
   </head>
   <body>
-    
 
-    <div>
-      <div id="errorCard" class="d-none justify-content-center mt-3"> 
+         <!-- Error card -->
+
+    <div id="errorCard" style="display: none;" class="justify-content-center mt-3">
+      <div></div>  
           <div class="card text-white bg-danger mb-3 d-flex" style="max-width: 18rem;">
-            <div class="card-header">Erreur</div>
+            
+            <div id="cardHeader" class="card-header"></div>
             <div class="card-body">
-              <p class="card-text">La ville que vous avez saisie n'est pas renseignée</p>
+              <p class="card-text" id="errorP"></p>
             </div>
       </div>  
       </div> 
     
+      <!-- Error card -->
 
-    <!--
-    <input type="button" value="APPEL API METEO"  onclick="buttonClickGET()"  />
-    <p id="zone_meteo">toto</p>
-    -->
+      <!---Form input -->
 
     <div class="h1">
       <div class=" d-flex justify-content-center mt-3">
@@ -40,6 +40,10 @@
       <button type="button" value="APPEL API METEO" class="btn btn-primary mb-2" onclick="buttonClickGET()" >Recherche</button>
     </form>
 
+    <!---Form input -->
+
+    <!--Card response API-->
+
 
       <div class="d-flex justify-content-center mt-5">
         <div class="card w-50">
@@ -48,6 +52,8 @@
           </div>
         </div>
     </div>
+
+     <!--Card response API-->
 
   </body>
 </html>
